@@ -1,0 +1,29 @@
+# DataSource Configuration
+# 相关配置文件汇总
+spring:
+  application:
+    name: SqlService
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/blogdatabase?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: postgres
+    password: Lzy010409
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  # mapper 映射文件路径  # 扫描xml的位置
+server:
+  port: 8081
+
+lzy:
+  jwt:
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    # 有效期7天
+    expire: 604800
+    header: Authorization
+
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1:6379
